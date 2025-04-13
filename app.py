@@ -5,7 +5,7 @@ from PIL import Image
 from tensorflow.keras.preprocessing import image 
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="projectUI/templates",static_folder="projectUI/static")
 
 # Load the trained model
 MODEL_PATH = "Models/kidney_stone_detection_model_cnn.h5"  

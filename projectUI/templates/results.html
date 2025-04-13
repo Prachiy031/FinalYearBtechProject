@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prediction Result</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction Result</h1>
+      <div class="result-layout">
+        <!-- Left side (Text) -->
+        <div class="result-left">
+          <p>{{ prediction }}</p>
+        </div>
+
+        <!-- Right side (Image/Icon) -->
+        <div class="result-right">
+          <img
+            src="{{ url_for('static', filename='kidneyIcon.png') }}"
+            alt="Kidney Icon"
+          />
+        </div>
+      </div>
+      <div class="back-link">
+        <a href="/">Try Another Image</a>
+      </div>
+    </div>
+  </body>
+</html>
